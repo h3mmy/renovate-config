@@ -1,0 +1,23 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "commitMessageTopic": "{{depName}}",
+    "commitMessageExtra": "to {{newVersion}}",
+    "commitMessageSuffix": "",
+    "commitBody": "Signed-off-by: bloopy-boi <166688+bloopy-boi[bot]@users.noreply.github.com>",
+    "packageRules": [
+      {
+        "matchDatasources": ["helm"],
+        "commitMessageTopic": "Helm chart {{depName}}"
+      },
+      {
+        "matchDatasources": ["docker"],
+        "commitMessageTopic": "Container image {{depName}}",
+        "commitMessageExtra": "to {{#if isSingleVersion}}{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}"
+      },
+      {
+        "matchDatasources": ["terraform-provider"],
+        "commitMessageTopic": "Terraform provider {{depName}}",
+        "commitMessageExtra": "to {{#if isSingleVersion}}{{{toVersion}}}{{else}}{{{newValue}}}{{/if}}"
+      }
+    ]
+  }
