@@ -6,7 +6,6 @@
     ":disableRateLimiting",
     "docker:enableMajor",
     "docker:pinDigests",
-    ":separateMajorMinor",
     ":automergePatch",
     ":automergeDigest",
     ":gomod",
@@ -22,5 +21,6 @@
   "suppressNotifications": ["prIgnoreNotification"],
   "commitBodyTable": true,
   "rebaseWhen": "conflicted",
-  "postUpdateOptions": ["gomodTidy"]
+  "postUpdateOptions": ["gomodTidy"],
+  "separateMajorMinor": true
 }
