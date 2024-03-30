@@ -3,7 +3,6 @@
     "commitMessageTopic": "{{depName}}",
     "commitMessageExtra": "to {{newVersion}}",
     "commitMessageSuffix": "",
-    "commitBody": "Signed-off-by: bloopy-boi <166688+bloopy-boi[bot]@users.noreply.github.com>",
     "packageRules": [
       {
         "matchDatasources": ["helm"],
